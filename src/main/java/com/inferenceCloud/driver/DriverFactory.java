@@ -6,22 +6,33 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverFactory {
 
-    static WebDriver driver;
+    private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
-    public static WebDriver getDriver(String browser) {
-        setDriver(browser);
-        return driver;
-    }
+   
 
-    public static void setDriver(String  browser) {
+    public static WebDriver setDriver(String  browser) {
         if(browser.equalsIgnoreCase("chrome")){
-            driver = new ChromeDriver();
+            tlDriver.set(new ChromeDriver());
             // set chrome driver
         } else if (browser.equalsIgnoreCase("firefox")) {
             // set firefox driver
-            driver = new FirefoxDriver();
+            tlDriver.set(new FirefoxDriver());
         }
 
+        return getDriver();
+
      }
+
+      public static WebDriver getDriver() {
+        return tlDriver.get();
+    }
+
+    public static void unloadDriver() {
+        if(tlDriver.get() != null) {
+            tlDriver.get().quit();
+            tlDriver.remove();
+
+        }
+    }
     
 }

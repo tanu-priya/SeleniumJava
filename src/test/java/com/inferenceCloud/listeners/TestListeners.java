@@ -1,8 +1,8 @@
 package com.inferenceCloud.listeners;
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.inferenceCloud.driver.DriverFactory;
 import com.inferenceCloud.utils.ScreenShotUtil;
 
 public class TestListeners implements ITestListener{
@@ -20,21 +20,11 @@ public class TestListeners implements ITestListener{
 
     @Override
     public void onTestFailure(ITestResult result) {
-        Object testClass = result.getInstance();
-        WebDriver driver = null;
-
-        try {
-            driver = (WebDriver) result
-                .getTestClass()
-                .getRealClass()
-                .getSuperclass()
-                .getDeclaredField("driver")
-                .get(testClass);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         System.out.println("🔥 onTestFailure triggered for: " + result.getName());
-        ScreenShotUtil.getScreenShotPath(driver, result.getName());   
+        ScreenShotUtil.getScreenShotPath(
+        DriverFactory.getDriver(),
+        result.getName()
+    );
  
     }
     

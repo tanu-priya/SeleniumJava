@@ -3,6 +3,7 @@ package com.inferenceCloud.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.inferenceCloud.driver.DriverFactory;
 import com.inferenceCloud.utils.WaitUtil;
 
 public class DashboardPage {
@@ -10,7 +11,7 @@ public class DashboardPage {
     private WebDriver driver;
 
     public DashboardPage(WebDriver driver){
-        this.driver = driver;
+        this.driver = DriverFactory.getDriver();
 
     }
 
