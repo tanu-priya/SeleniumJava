@@ -8,10 +8,7 @@ import com.inferenceCloud.driver.DriverFactory;
 import com.inferenceCloud.utils.ConfigReader;
 
 public class BaseTest {
-
-    
-
-    protected WebDriver driver;
+    public WebDriver driver;
     protected String email;
     protected String password;
 
