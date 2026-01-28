@@ -3,6 +3,7 @@
 <suite name="Login Test Suite" parallel = "methods" thread-count = "2" verbose="2">
     <listeners>
         <listener class-name="com.inferenceCloud.listeners.TestListeners"/>
+        <listener class-name="com.inferenceCloud.listeners.RetryListners"/>
     </listeners>
     <test name="LoginTest">
         <classes>

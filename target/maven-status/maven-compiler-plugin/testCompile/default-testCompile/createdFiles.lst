@@ -1,3 +1,5 @@
+com\inferenceCloud\retry\RetryAnalyzer.class
 com\inferenceCloud\listeners\TestListeners.class
 com\inferenceCloud\base\BaseTest.class
 com\inferenceCloud\tests\LoginTest.class
+com\inferenceCloud\listeners\RetryListners.class

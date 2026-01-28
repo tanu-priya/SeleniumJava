@@ -16,7 +16,7 @@ public class ScreenShotUtil {
         if (driver == null) {
         System.out.println("❌ Driver is NULL. Screenshot cannot be taken.");
         return null;
-    }
+        }
         TakesScreenshot ts = (TakesScreenshot) driver;  
         File source = ts.getScreenshotAs(OutputType.FILE);
 
