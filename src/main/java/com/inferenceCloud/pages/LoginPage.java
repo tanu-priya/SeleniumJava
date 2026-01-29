@@ -19,6 +19,7 @@ public class LoginPage {
     private By Password = By.name("password");
     private By LoginButton = By.xpath("//button[@data-aria-label='Log In']");
     private By WelcomeText = By.xpath("//img/following-sibling::h2[contains(@class,'text')]");
+    private By LoginError = By.xpath("//div[contains(@class,'ic-icon')]/following-sibling::p");
 
     public void enterEmail(String email){
         driver.findElement(Email).sendKeys(email);
@@ -38,7 +39,18 @@ public class LoginPage {
 
     public WebElement welcomeTextLocator(){
         return driver.findElement(WelcomeText);
-    }   
+    }  
+    public WebElement errorLocator(){
+        return driver.findElement(LoginError);
+    }
+    public String getWelcomeText(){
+        return errorLocator().getText();
+    }
+
+    public boolean isLoginErrorDisplayed(){
+        WaitUtil.waitForVisibility(driver, 5, LoginError);
+        return errorLocator().isDisplayed();
+    }
 
     public DashboardPage loginUser(String email, String password){
         WaitUtil.waitForVisibility(driver, 5, Email);

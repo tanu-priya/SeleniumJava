@@ -3,6 +3,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.inferenceCloud.base.BaseTest;
+import com.inferenceCloud.dataproviders.TestDataProvider;
 import com.inferenceCloud.driver.DriverFactory;
 import com.inferenceCloud.pages.DashboardPage;
 import com.inferenceCloud.pages.LoginPage;
@@ -20,12 +21,19 @@ public class LoginTest extends BaseTest {
         softAssert.assertAll();
     }
 
-    @Test
-    public void testLogin() {
+    @Test (dataProvider = "loginData", dataProviderClass = TestDataProvider.class)
+    public void testLogin(String email, String password, boolean expectedResult) {
     LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
     DashboardPage dashboardPage = loginPage.loginUser(email, password);
-    dashboardPage.closeNotificationIfPresent();
-    Assert.assertEquals("Team Swiggy", dashboardPage.getTeamName());
+    //dashboardPage.closeNotificationIfPresent();
+
+     if (expectedResult) {
+        dashboardPage.closeNotificationIfPresent();
+        Assert.assertEquals("Team Swiggy", dashboardPage.getTeamName());
+
+    } else {
+        Assert.assertTrue(loginPage.isLoginErrorDisplayed(), "Login should fail");
+    }
     }
 
 
