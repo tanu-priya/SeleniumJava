@@ -4,6 +4,7 @@ D:\Selenium\seleniumtests\src\main\java\com\inferenceCloud\pages\DashboardPage.j
 D:\Selenium\seleniumtests\src\main\java\com\inferenceCloud\pages\LoginPage.java
 D:\Selenium\seleniumtests\src\main\java\com\inferenceCloud\driver\DriverFactory.java
 D:\Selenium\seleniumtests\src\main\java\com\inferenceCloud\utils\Log.java
+D:\Selenium\seleniumtests\src\main\java\com\inferenceCloud\utils\AllureUtil.java
 D:\Selenium\seleniumtests\src\main\java\com\inferenceCloud\utils\ExcelUtil.java
 D:\Selenium\seleniumtests\src\main\java\com\inferenceCloud\utils\ConfigReader.java
 D:\Selenium\seleniumtests\src\main\java\com\inferenceCloud\constants\FrameworkConstants.java

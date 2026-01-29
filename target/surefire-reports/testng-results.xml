@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-29T12:17:07 IST" name="Login Test Suite" finished-at="2026-01-29T12:17:19 IST" duration-ms="12056">
+  <suite started-at="2026-01-29T14:52:34 IST" name="Login Test Suite" finished-at="2026-01-29T14:52:43 IST" duration-ms="9212">
     <groups>
     </groups>
-    <test started-at="2026-01-29T12:17:07 IST" name="LoginTest" finished-at="2026-01-29T12:17:19 IST" duration-ms="12056">
+    <test started-at="2026-01-29T14:52:34 IST" name="LoginTest" finished-at="2026-01-29T14:52:43 IST" duration-ms="9212">
       <class name="com.inferenceCloud.tests.LoginTest">
-        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:07 IST" name="setupDriver" finished-at="2026-01-29T12:17:15 IST" duration-ms="7495" status="PASS">
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.inferenceCloud.tests.LoginTest@5b40ceb]" started-at="2026-01-29T14:52:34 IST" name="setupDriver" finished-at="2026-01-29T14:52:38 IST" duration-ms="4284" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupDriver -->
-        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:07 IST" name="setupDriver" finished-at="2026-01-29T12:17:14 IST" duration-ms="7162" status="PASS">
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.inferenceCloud.tests.LoginTest@5b40ceb]" started-at="2026-01-29T14:52:34 IST" name="setupDriver" finished-at="2026-01-29T14:52:38 IST" duration-ms="4284" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupDriver -->
-        <test-method signature="loginButtonIsDisabledWithoutCredentials()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:14 IST" name="loginButtonIsDisabledWithoutCredentials" finished-at="2026-01-29T12:17:14 IST" duration-ms="143" status="PASS">
+        <test-method signature="loginButtonIsDisabledWithoutCredentials()[pri:0, instance:com.inferenceCloud.tests.LoginTest@5b40ceb]" started-at="2026-01-29T14:52:38 IST" name="loginButtonIsDisabledWithoutCredentials" finished-at="2026-01-29T14:52:38 IST" duration-ms="214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginButtonIsDisabledWithoutCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:14 IST" name="tearDown" finished-at="2026-01-29T12:17:15 IST" duration-ms="301" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method signature="testLogin()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:15 IST" name="testLogin" finished-at="2026-01-29T12:17:19 IST" duration-ms="4293" status="PASS">
+        <test-method signature="testLogin()[pri:0, instance:com.inferenceCloud.tests.LoginTest@5b40ceb]" started-at="2026-01-29T14:52:38 IST" name="testLogin" finished-at="2026-01-29T14:52:43 IST" duration-ms="4452" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:19 IST" name="tearDown" finished-at="2026-01-29T12:17:19 IST" duration-ms="209" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inferenceCloud.tests.LoginTest@5b40ceb]" started-at="2026-01-29T14:52:38 IST" name="tearDown" finished-at="2026-01-29T14:52:39 IST" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inferenceCloud.tests.LoginTest@5b40ceb]" started-at="2026-01-29T14:52:43 IST" name="tearDown" finished-at="2026-01-29T14:52:43 IST" duration-ms="319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
