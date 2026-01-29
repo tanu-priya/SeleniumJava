@@ -3,6 +3,7 @@ com\inferenceCloud\utils\ExcelUtil.class
 com\inferenceCloud\utils\ConfigReader.class
 com\inferenceCloud\pages\LoginPage.class
 com\inferenceCloud\utils\ScreenShotUtil.class
+com\inferenceCloud\utils\Log.class
 com\inferenceCloud\utils\WaitUtil.class
 com\inferenceCloud\driver\DriverFactory.class
 com\inferenceCloud\constants\FrameworkConstants.class

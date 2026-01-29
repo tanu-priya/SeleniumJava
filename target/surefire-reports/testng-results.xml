@@ -1,174 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="2" ignored="0" total="4" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-28T17:36:30 IST" name="Login Test Suite" finished-at="2026-01-28T17:37:12 IST" duration-ms="41971">
+  <suite started-at="2026-01-29T12:17:07 IST" name="Login Test Suite" finished-at="2026-01-29T12:17:19 IST" duration-ms="12056">
     <groups>
     </groups>
-    <test started-at="2026-01-28T17:36:30 IST" name="LoginTest" finished-at="2026-01-28T17:37:12 IST" duration-ms="41971">
+    <test started-at="2026-01-29T12:17:07 IST" name="LoginTest" finished-at="2026-01-29T12:17:19 IST" duration-ms="12056">
       <class name="com.inferenceCloud.tests.LoginTest">
-        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:36:30 IST" name="setupDriver" finished-at="2026-01-28T17:36:33 IST" duration-ms="3336" status="PASS">
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:07 IST" name="setupDriver" finished-at="2026-01-29T12:17:15 IST" duration-ms="7495" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupDriver -->
-        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:36:30 IST" name="setupDriver" finished-at="2026-01-28T17:36:34 IST" duration-ms="3929" status="PASS">
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:07 IST" name="setupDriver" finished-at="2026-01-29T12:17:14 IST" duration-ms="7162" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupDriver -->
-        <test-method retried="true" signature="testLogin()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:36:33 IST" name="testLogin" finished-at="2026-01-28T17:36:44 IST" duration-ms="10863" status="SKIP">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-aria-label = 'Finish'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51280}, goog:processID: 15700, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51280/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 55e13159095e86079727bde4da4e1d85]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-aria-label = 'Finish'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51280}, goog:processID: 15700, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51280/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 55e13159095e86079727bde4da4e1d85
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.inferenceCloud.utils.WaitUtil.waitForVisibility(WaitUtil.java:18)
-at com.inferenceCloud.pages.DashboardPage.closeNotificationIfPresent(DashboardPage.java:26)
-at com.inferenceCloud.tests.LoginTest.testLogin(LoginTest.java:27)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method signature="loginButtonIsDisabledWithoutCredentials()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:36:34 IST" name="loginButtonIsDisabledWithoutCredentials" finished-at="2026-01-28T17:36:34 IST" duration-ms="75" status="PASS">
+        <test-method signature="loginButtonIsDisabledWithoutCredentials()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:14 IST" name="loginButtonIsDisabledWithoutCredentials" finished-at="2026-01-29T12:17:14 IST" duration-ms="143" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginButtonIsDisabledWithoutCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:36:34 IST" name="tearDown" finished-at="2026-01-28T17:36:34 IST" duration-ms="176" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:14 IST" name="tearDown" finished-at="2026-01-29T12:17:15 IST" duration-ms="301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:36:44 IST" name="tearDown" finished-at="2026-01-28T17:36:44 IST" duration-ms="213" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:36:44 IST" name="setupDriver" finished-at="2026-01-28T17:36:47 IST" duration-ms="2751" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupDriver -->
-        <test-method retried="true" signature="testLogin()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:36:47 IST" name="testLogin" finished-at="2026-01-28T17:36:58 IST" duration-ms="10697" status="SKIP">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-aria-label = 'Finish'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60892}, goog:processID: 692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60892/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 36477bae47683d5679a76dd63c75db14]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-aria-label = 'Finish'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60892}, goog:processID: 692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60892/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 36477bae47683d5679a76dd63c75db14
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.inferenceCloud.utils.WaitUtil.waitForVisibility(WaitUtil.java:18)
-at com.inferenceCloud.pages.DashboardPage.closeNotificationIfPresent(DashboardPage.java:26)
-at com.inferenceCloud.tests.LoginTest.testLogin(LoginTest.java:27)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="testLogin()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:15 IST" name="testLogin" finished-at="2026-01-29T12:17:19 IST" duration-ms="4293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:36:58 IST" name="tearDown" finished-at="2026-01-28T17:36:58 IST" duration-ms="202" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setupDriver()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:36:58 IST" name="setupDriver" finished-at="2026-01-28T17:37:01 IST" duration-ms="2595" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupDriver -->
-        <test-method signature="testLogin()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:37:01 IST" name="testLogin" finished-at="2026-01-28T17:37:11 IST" duration-ms="10685" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-aria-label = 'Finish'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52692}, goog:processID: 4224, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52692/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 03ad6c9b205ed12afde799f1a7593860]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@data-aria-label = 'Finish'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52692}, goog:processID: 4224, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52692/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 03ad6c9b205ed12afde799f1a7593860
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.inferenceCloud.utils.WaitUtil.waitForVisibility(WaitUtil.java:18)
-at com.inferenceCloud.pages.DashboardPage.closeNotificationIfPresent(DashboardPage.java:26)
-at com.inferenceCloud.tests.LoginTest.testLogin(LoginTest.java:27)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:263)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inferenceCloud.tests.LoginTest@7db12bb6]" started-at="2026-01-28T17:37:12 IST" name="tearDown" finished-at="2026-01-28T17:37:12 IST" duration-ms="210" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.inferenceCloud.tests.LoginTest@3f053c80]" started-at="2026-01-29T12:17:19 IST" name="tearDown" finished-at="2026-01-29T12:17:19 IST" duration-ms="209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
