@@ -163,4 +163,3 @@ git push -u origin main
 - `*.log`
 
 ---
-Created for quick GitHub upload and local runs. If you want, I can add a `.github/workflows` CI that runs tests and publishes Allure artifacts.
