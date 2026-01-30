@@ -4,3 +4,4 @@ com\inferenceCloud\dataproviders\TestDataProvider.class
 com\inferenceCloud\tests\LoginTest.class
 com\inferenceCloud\listeners\RetryListners.class
 com\inferenceCloud\listeners\TestListeners.class
+com\inferenceCloud\dataproviders\TestDataFromExcel.class

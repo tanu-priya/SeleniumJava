@@ -11,7 +11,6 @@ public class ConfigReader {
 
         try {
             String user_dir = System.getProperty("user.dir");
-            // /Users/promode/Documents/TTA/ATB14xSeleniumAdvanceFramework/src/main/resources/data.properties
             String file_path = user_dir + "/src/main/resources/.properties";
             FileInputStream fileInputStream = new FileInputStream(file_path);
             p = new Properties();
