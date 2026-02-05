@@ -1,17 +1,24 @@
 package com.inferenceCloud.driver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class DriverFactory {
 
     private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
     public static WebDriver setDriver(String browser) {
+        String runMode = System.getProperty("runMode", "local");// local | grid
 
+        try{
         if (browser.equalsIgnoreCase("chrome")) {
+            // set chrome driver
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless=new"); // IMPORTANT
             options.addArguments("--no-sandbox");
@@ -19,10 +26,21 @@ public class DriverFactory {
             options.addArguments("--disable-gpu");
             options.addArguments("--window-size=1920,1080");
             tlDriver.set(new ChromeDriver(options));
-            // set chrome driver
+             if (runMode.equalsIgnoreCase("grid")) {
+                    // Jenkins / Docker
+                    tlDriver.set(new RemoteWebDriver(
+                            new URL("http://selenium-hub:4444/wd/hub"),options));
+                } else {
+                    // Local
+                    tlDriver.set(new ChromeDriver(options));
+                }
+
         } else if (browser.equalsIgnoreCase("firefox")) {
             // set firefox driver
             tlDriver.set(new FirefoxDriver());
+        }
+    } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
         }
 
         return getDriver();
