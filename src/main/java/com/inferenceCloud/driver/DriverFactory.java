@@ -22,11 +22,8 @@ public class DriverFactory {
             if (browser.equalsIgnoreCase("chrome")) {
                 // set chrome driver
                 ChromeOptions options = new ChromeOptions();
-                options.setCapability("browserName", "chrome");
-                options.addArguments("--headless"); // IMPORTANT
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
-                options.addArguments("--disable-gpu");
                 options.addArguments("--window-size=1920,1080");
                 tlDriver.set(new ChromeDriver(options));
                 if (runMode.equalsIgnoreCase("grid")) {
@@ -35,6 +32,7 @@ public class DriverFactory {
                     tlDriver.set(new RemoteWebDriver(
                             new URL("http://selenium-hub:4444"), options));
                 } else {
+                    options.addArguments("--headless");
                     System.out.println(">>>> USING LOCAL CHROMEDRIVER");
                     // Local
                     tlDriver.set(new ChromeDriver(options));
