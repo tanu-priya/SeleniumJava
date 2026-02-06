@@ -22,7 +22,7 @@ public class DriverFactory {
             if (browser.equalsIgnoreCase("chrome")) {
                 // set chrome driver
                 ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless=new"); // IMPORTANT
+                options.addArguments("--headless"); // IMPORTANT
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--disable-gpu");
@@ -32,7 +32,7 @@ public class DriverFactory {
                     // Jenkins / Docker
                     System.out.println(">>>> USING SELENIUM GRID");
                     tlDriver.set(new RemoteWebDriver(
-                            new URL("http://selenium-hub:4444/wd/hub"), options));
+                            new URL("http://selenium-hub:4444"), options));
                 } else {
                     System.out.println(">>>> USING LOCAL CHROMEDRIVER");
                     // Local
