@@ -22,6 +22,7 @@ public class DriverFactory {
             if (browser.equalsIgnoreCase("chrome")) {
                 // set chrome driver
                 ChromeOptions options = new ChromeOptions();
+                options.setCapability("browserName", "chrome");
                 options.addArguments("--headless"); // IMPORTANT
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
