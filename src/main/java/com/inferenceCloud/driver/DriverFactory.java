@@ -14,32 +14,36 @@ public class DriverFactory {
     private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
     public static WebDriver setDriver(String browser) {
+        System.out.println(">>>> RUN MODE = " + System.getProperty("runMode"));
+        System.out.println(">>>> BROWSER = " + browser);
         String runMode = System.getProperty("runMode", "local");// local | grid
 
-        try{
-        if (browser.equalsIgnoreCase("chrome")) {
-            // set chrome driver
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless=new"); // IMPORTANT
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--window-size=1920,1080");
-            tlDriver.set(new ChromeDriver(options));
-             if (runMode.equalsIgnoreCase("grid")) {
+        try {
+            if (browser.equalsIgnoreCase("chrome")) {
+                // set chrome driver
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless=new"); // IMPORTANT
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--window-size=1920,1080");
+                tlDriver.set(new ChromeDriver(options));
+                if (runMode.equalsIgnoreCase("grid")) {
                     // Jenkins / Docker
+                    System.out.println(">>>> USING SELENIUM GRID");
                     tlDriver.set(new RemoteWebDriver(
-                            new URL("http://selenium-hub:4444/wd/hub"),options));
+                            new URL("http://selenium-hub:4444/wd/hub"), options));
                 } else {
+                    System.out.println(">>>> USING LOCAL CHROMEDRIVER");
                     // Local
                     tlDriver.set(new ChromeDriver(options));
                 }
 
-        } else if (browser.equalsIgnoreCase("firefox")) {
-            // set firefox driver
-            tlDriver.set(new FirefoxDriver());
-        }
-    } catch (MalformedURLException e) {
+            } else if (browser.equalsIgnoreCase("firefox")) {
+                // set firefox driver
+                tlDriver.set(new FirefoxDriver());
+            }
+        } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
 
