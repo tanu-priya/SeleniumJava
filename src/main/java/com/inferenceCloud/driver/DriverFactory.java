@@ -25,7 +25,6 @@ public class DriverFactory {
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--window-size=1920,1080");
-                tlDriver.set(new ChromeDriver(options));
                 if (runMode.equalsIgnoreCase("grid")) {
                     // Jenkins / Docker
                     System.out.println(">>>> USING SELENIUM GRID");
