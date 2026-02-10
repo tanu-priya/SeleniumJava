@@ -11,7 +11,7 @@ pipeline {
 
         stage('Run Selenium Tests') {
             steps {
-                sh 'mvn clean test -DrunMode=grid'
+                sh './mvnw clean test -DrunMode=grid'
             }
         }
     }
