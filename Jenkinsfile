@@ -4,14 +4,15 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        checkout scm
+        git branch: 'main',
+        url: 'https://github.com/tanu-priya/SeleniumJava.git'
       }
     }
 
     stage('Build & Test') {
       steps {
         // For Linux agents use 'sh', for Windows agents use 'bat' instead
-        sh 'mvn -B clean test'
+        sh 'mvn clean test -DrunMode=grid'
         // bat 'mvn -B clean test'  // uncomment on Windows nodes
       }
     }
@@ -33,13 +34,6 @@ pipeline {
           }
         }
       }
-    }
-  }
-
-  post {
-    always {
-      junit 'target/surefire-reports/*.xml'
-      archiveArtifacts artifacts: 'screenshots/**, logs/**', allowEmptyArchive: true
     }
   }
 }

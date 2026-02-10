@@ -128,6 +128,7 @@ scoop install allure
 
 ```powershell
 mvn clean test
+mvn clean test -DrunMode = local
 ```
 
 3a) Serve report (generates and opens a local server)
