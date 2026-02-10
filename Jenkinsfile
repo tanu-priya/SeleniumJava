@@ -8,6 +8,12 @@ pipeline {
                     branch: 'main'
             }
         }
+        stage('Fix mvnw permission') {
+            steps {
+                sh 'chmod +x mvnw'
+            }
+        }
+
 
         stage('Run Selenium Tests') {
             steps {
