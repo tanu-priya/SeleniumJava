@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    environment {
+        PROD_USERNAME = credentials('PROD_USERNAME')
+        PROD_PASSWORD = credentials('PROD_PASSWORD')
+    }
+
 
     parameters {
         choice(
