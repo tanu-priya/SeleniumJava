@@ -7,13 +7,14 @@ pipeline {
         choices: ['chrome', 'firefox'], 
         description: 'Select the browser to run tests on'
         )
-    }
+    
 
     choice(
         name:"ENV",
         choices: ['dev', 'prod'],
         description: 'Select the environment to run tests on'
     )
+    }
 
     stages {
         stage('Checkout') {
