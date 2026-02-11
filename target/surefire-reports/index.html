@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,17 +108,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login_Test_Suite" title="com.inferenceCloud.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(test26@mailinator.com, 11111111@Pp, TRUE)">testLogin(test26@mailinator.com, 11111111@Pp, TRUE)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login_Test_Suite" title="com.inferenceCloud.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(abc@gmail.com, 111111, FALSE)">testLogin(abc@gmail.com, 111111, FALSE)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Login_Test_Suite" title="com.inferenceCloud.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(test26@mailinator.com, 111, FALSE)">testLogin(test26@mailinator.com, 111, FALSE)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Login_Test_Suite" title="com.inferenceCloud.tests.LoginTest" class="method navigator-link" hash-for-method="testLoginWithValidCredentials">testLoginWithValidCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Login_Test_Suite -->
@@ -148,26 +138,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin(test26@mailinator.com, 11111111@Pp, TRUE)">
-                  </a> <!-- testLogin(test26@mailinator.com, 11111111@Pp, TRUE) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(test26@mailinator.com,11111111@Pp,TRUE)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testLogin(abc@gmail.com, 111111, FALSE)">
-                  </a> <!-- testLogin(abc@gmail.com, 111111, FALSE) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(abc@gmail.com,111111,FALSE)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testLogin(test26@mailinator.com, 111, FALSE)">
-                  </a> <!-- testLogin(test26@mailinator.com, 111, FALSE) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(test26@mailinator.com,111,FALSE)</span>
+                  <a name="testLoginWithValidCredentials">
+                  </a> <!-- testLoginWithValidCredentials -->
+                  <span class="method-name">testLoginWithValidCredentials</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -228,28 +201,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLogin')
+data.setCell(0, 1, 'testLoginWithValidCredentials')
 data.setCell(0, 2, 'com.inferenceCloud.tests.LoginTest')
-data.setCell(0, 3, 6375);
+data.setCell(0, 3, 3948);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginButtonIsDisabledWithoutCredentials')
 data.setCell(1, 2, 'com.inferenceCloud.tests.LoginTest')
-data.setCell(1, 3, 2480);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testLogin')
-data.setCell(2, 2, 'com.inferenceCloud.tests.LoginTest')
-data.setCell(2, 3, 1874);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testLogin')
-data.setCell(3, 2, 'com.inferenceCloud.tests.LoginTest')
-data.setCell(3, 3, 1708);
+data.setCell(1, 3, 142);
 window.suiteTableData['Login_Test_Suite']= { tableData: data, tableDiv: 'times-div-Login_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Login_Test_Suite">
               </div> <!-- times-div-Login_Test_Suite -->
             </div> <!-- times-div -->
@@ -264,9 +229,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Login_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.inferenceCloud.tests.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testLoginWithInvalidCredentials</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Login_Test_Suite" class="panel">
@@ -282,47 +254,23 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setupDriver</span>
-                <span class="method-start">906 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testLogin(test26@mailinator.com, 11111111@Pp, TRUE)</span>
-                <span class="method-start">10675 ms</span>
-              </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginButtonIsDisabledWithoutCredentials</span>
-                <span class="method-start">10675 ms</span>
+                <span class="method-start">5294 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">13181 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">17056 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setupDriver</span>
-                <span class="method-start">17304 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testLogin(test26@mailinator.com, 111, FALSE)</span>
-                <span class="method-start">22521 ms</span>
+                <span class="method-name">testLoginWithValidCredentials</span>
+                <span class="method-start">5294 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">24395 ms</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setupDriver</span>
-                <span class="method-start">24565 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testLogin(abc@gmail.com, 111111, FALSE)</span>
-                <span class="method-start">30938 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">32648 ms</span>
+                <span class="method-start">9243 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

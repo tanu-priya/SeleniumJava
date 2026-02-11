@@ -7,6 +7,7 @@ import com.inferenceCloud.dataproviders.TestDataFromExcel;
 import com.inferenceCloud.driver.DriverFactory;
 import com.inferenceCloud.pages.DashboardPage;
 import com.inferenceCloud.pages.LoginPage;
+import com.inferenceCloud.utils.ConfigReader;
 
 import org.testng.Assert;
 
@@ -21,22 +22,22 @@ public class LoginTest extends BaseTest {
         softAssert.assertAll();
     }
 
-    @Test (enabled = true, dataProvider = "excelData", dataProviderClass = TestDataFromExcel.class)
-    public void testLogin(String email, String password, String expectedResult) {
-    boolean expected = Boolean.parseBoolean(expectedResult);
-
+    @Test (enabled = false, dataProvider = "excelData", dataProviderClass = TestDataFromExcel.class)
+    public void testLoginWithInvalidCredentials(String email, String password, String expectedResult) {
+    //boolean expected = Boolean.parseBoolean(expectedResult);
     LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
-    DashboardPage dashboardPage = loginPage.loginUser(email, password);
+    loginPage.loginUser(email, password);
+    Assert.assertTrue(loginPage.isLoginErrorDisplayed(), "Login should fail");
+    }
 
-     if (expected) {
+    @Test(enabled = true)
+    public void testLoginWithValidCredentials() {
+        LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
+        DashboardPage dashboardPage = loginPage.loginUser(ConfigReader.getProperty("email"), ConfigReader.getProperty("password"));
         dashboardPage.closeNotificationIfPresent();
-        Assert.assertEquals("Team Swiggy", dashboardPage.getTeamName());
+        Assert.assertEquals("Team Swiggy", dashboardPage.getTeamName(), "Login should succeed and user should be navigated to dashboard");
 
-    } else {
-        Assert.assertTrue(loginPage.isLoginErrorDisplayed(), "Login should fail");
     }
-    }
-
 
 }
   

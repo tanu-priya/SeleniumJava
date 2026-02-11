@@ -13,10 +13,11 @@ public class DriverFactory {
 
     private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
-    public static WebDriver setDriver(String browser) {
+    public static WebDriver setDriver() {
         System.out.println(">>>> RUN MODE = " + System.getProperty("runMode"));
-        System.out.println(">>>> BROWSER = " + browser);
+        System.out.println(">>>> BROWSER = " + System.getProperty("browser"));
         String runMode = System.getProperty("runMode", "local");// local | grid
+        String browser = System.getProperty("browser", "chrome");// chrome | firefox
 
         try {
             if (browser.equalsIgnoreCase("chrome")) {
@@ -31,7 +32,7 @@ public class DriverFactory {
                     tlDriver.set(new RemoteWebDriver(
                             new URL("http://selenium-hub:4444"), options));
                 } else {
-                    options.addArguments("--headless");
+                    //options.addArguments("--headless");
                     System.out.println(">>>> USING LOCAL CHROMEDRIVER");
                     // Local
                     tlDriver.set(new ChromeDriver(options));

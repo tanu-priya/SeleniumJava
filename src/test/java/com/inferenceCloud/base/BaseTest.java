@@ -15,7 +15,7 @@ public class BaseTest {
     @BeforeMethod
     public void setupDriver() {
         logger.info("Setting up the driver and navigating to the URL");
-        DriverFactory.setDriver(ConfigReader.getProperty("browser"));          
+        DriverFactory.setDriver();          
         logger.info("Launching URL: " + ConfigReader.getProperty("prodUrl"));
         DriverFactory.getDriver().manage().window().maximize();
         DriverFactory.getDriver().get(ConfigReader.getProperty("prodUrl"));
