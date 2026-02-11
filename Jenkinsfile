@@ -1,6 +1,20 @@
 pipeline {
     agent any
 
+    parameters {
+        choice(
+        name: 'BROWSER',
+        choices: ['chrome', 'firefox'], 
+        description: 'Select the browser to run tests on'
+        )
+    }
+
+    choice(
+        name:"ENV",
+        choices: ['dev', 'prod'],
+        description: 'Select the environment to run tests on'
+    )
+
     stages {
         stage('Checkout') {
             steps {
@@ -17,7 +31,7 @@ pipeline {
 
         stage('Run Selenium Tests') {
             steps {
-                sh './mvnw clean test -DrunMode=grid'
+                sh './mvnw clean test -DrunMode=grid -Dbrowser=${params.BROWSER} -Denv=${params.ENV}'
             }
         }
     }
