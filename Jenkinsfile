@@ -37,7 +37,7 @@ pipeline {
 
         stage('Run Selenium Tests') {
             steps {
-                sh './mvnw clean test -DrunMode=grid -Dbrowser=${params.BROWSER} -Denv=${params.ENV}'
+                sh """./mvnw clean test -DrunMode=grid -Dbrowser=${params.BROWSER} -Denv=${params.ENV}"""
             }
         }
     }
